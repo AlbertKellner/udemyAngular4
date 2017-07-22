@@ -12,7 +12,8 @@ import { highlightDirective } from './hightlight.directive';
   declarations: [
     AppComponent,
     StocksComponent,
-    StockDirectiveDirective
+    StockDirectiveDirective,
+    highlightDirective
   ],
   imports: [
     BrowserModule,
