@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StockService } from "./stock.service";
 
 @Component({
     selector: 'stocks',
@@ -14,6 +15,10 @@ import { Component } from '@angular/core';
 
 export class StocksComponent {
     title = 'list of Stocks';
-    stocks = ['APPL', 'IMB', 'GOOG', 'UDEMY'];
+    //stocks = ['APPL', 'IMB', 'GOOG', 'UDEMY'];
+    stocks;
 
+    constructor(stockService: StockService) {
+        this.stocks = stockService.getStocks();
+    }
 }

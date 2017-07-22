@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core'
 
 export class StockService {
     getStocks(): string[] {
-        return ['asd', 'dsa', 'qwerty'];
+        return ['APPL', 'IMB', 'GOOG', 'UDEMY'];
     };
 }
