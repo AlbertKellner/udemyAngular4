@@ -4,7 +4,7 @@ import { Directive, Input, Renderer, ElementRef } from '@angular/core';
     selector: '[MyHightlight]'
 })
 
-export class hightlight {
+export class highlightDirective {
     constructor(el: ElementRef, renderer: Renderer) {
         renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'blue ')
     }
