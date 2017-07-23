@@ -15,7 +15,7 @@ import { DateFormatterPipe } from './date-formatter.pipe';
     AppComponent,
     StocksComponent,
     StockDirectiveDirective,
-    highlightDirective,
+    highlightDirective,  
     DateFormatterPipe
   ],
   imports: [
