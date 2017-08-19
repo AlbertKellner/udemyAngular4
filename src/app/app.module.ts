@@ -9,19 +9,21 @@ import { StockDirectiveDirective } from './stock-directive.directive';
 import { highlightDirective } from './hightlight.directive';
 import { StockService } from "./stock.service";
 import { DateFormatterPipe } from './date-formatter.pipe';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
     StocksComponent,
     StockDirectiveDirective,
-    highlightDirective,  
+    highlightDirective,
     DateFormatterPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [StockService],
   bootstrap: [AppComponent]
