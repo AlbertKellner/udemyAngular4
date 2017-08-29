@@ -1,4 +1,4 @@
 export interface Security {
     trade();
-    fairValueCompute();
+    fairValueCompute(); 
 }
