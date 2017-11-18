@@ -9,6 +9,7 @@ import { StocksComponent } from "./stocks.component";
 
 export class AppComponent {
   title = 'Titulo';
+  firstName = 'albert';
   today = new Date();
   profile = { id: 10001, name: 'Beto', role: 'Administrator' }
 }

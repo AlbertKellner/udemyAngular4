@@ -17,5 +17,13 @@
   </nav>
 
   <router-outlet></router-outlet>
+
+  <label> First Name Captalized
+    <input [(ngModel)]="firstName" type='text'>
+  </label>
+  <br />
+  <label name='fNameCapitalized'>
+    {{firstName | capitalize}}
+  </label>
   
 </div>

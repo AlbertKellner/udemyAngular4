@@ -13,6 +13,7 @@ import { routing } from './app.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CurrencyService } from "./Currency.service";
 import { BondsDirective } from './bonds.directive';
+import { CapitalizePipe } from './capitalize.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BondsDirective } from './bonds.directive';
     highlightDirective,
     DateFormatterPipe,
     DashboardComponent,
-    BondsDirective
+    BondsDirective,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
