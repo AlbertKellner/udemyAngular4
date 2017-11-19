@@ -19,8 +19,9 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  createStock() {
-
+  createStock(newStockCode: string, newName: string) {
+    this.StockService.createStock(newStockCode, newName).subscribe();
+    // location.reload();
   }
 
   getAllStocks() {

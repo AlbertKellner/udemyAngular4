@@ -17,6 +17,10 @@ export class StockService {
             .catch((error: any) => Observable.throw(error.json().error || 'Server Error'));
     }
 
+    createStock(newStockCode: string, newName: string): Observable<any> {
+        return this.http.post("http://localhost:3000/stocks", { name: newName, stockCode: newStockCode });
+    }
+
     getStocks(): string[] {
         return ['APPL', 'IMB', 'GOOG', 'UDEMY'];
     };
