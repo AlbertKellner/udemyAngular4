@@ -1,7 +1,8 @@
 <div class="m-x-auto p-a-2" *ngIf="updateEnable">
-  Stock Code: <input #updateStockCode [value]="selectedStock.stockCode">
-  Stock Name: <input #updateStockName [value]="selectedStock.name">
-  <button type="button"  class="btn btn-warning" (click)="updateStock(updateStockCode.value, updateStockName.value)">
+  Stock Code:
+  <input #updateStockCode [value]="selectedStock.stockCode"> Stock Name:
+  <input #updateStockName [value]="selectedStock.name">
+  <button type="button" class="btn btn-warning" (click)="updateStock(updateStockCode.value, updateStockName.value)">
     UPDATE
   </button>
 </div>
@@ -27,12 +28,21 @@
 </div>
 
 <hr>
-<h2>Add Stock</h2>
-Stock Code:
-<input #newStockCode /> Stock Name:
-<input #newName />
 
-<button type="button" class="btn btn-primary" (click)="createStock(newStockCode.value, newName.value)">CREATE</button>
+<form>
+  <div class="form-group">
+
+    <label for="stockCode">Stock Code</label>
+    <input #newStockCode id="stockCode" class="form-control" required />
+    <label for="stockName">Stock Name</label>
+    <input #newName id="stockName" class="form-control" required />
+
+    <button type="submit" class="btn btn-warning">Validate</button>
+    <button type="button" class="btn btn-primary" (click)="createStock(newStockCode.value, newName.value)">CREATE</button>
+  </div>
+</form>
+
+
 
 <div class="jumbotron">
   <h1 class="display-3">Angular 4</h1>
