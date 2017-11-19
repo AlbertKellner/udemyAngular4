@@ -33,6 +33,10 @@ export class StockService {
             });
     }
 
+    deleteStock(stockId: string): Observable<any> {
+        return this.http.delete("http://localhost:3000/stocks/" + stockId);
+    }
+
     getStocks(): string[] {
         return ['APPL', 'IMB', 'GOOG', 'UDEMY'];
     };
