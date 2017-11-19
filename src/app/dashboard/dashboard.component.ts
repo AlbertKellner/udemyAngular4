@@ -9,8 +9,9 @@ import { StockService } from './../stock.service';
 })
 export class DashboardComponent implements OnInit {
 
+  stocks : string[];
+  
   ngOnInit() {
-    console.log('test');
     this.getAllStocks();
   }
 
@@ -21,7 +22,7 @@ export class DashboardComponent implements OnInit {
   getAllStocks() {
     this.StockService.getStocksApi()
       .subscribe(
-      data => console.log(JSON.stringify(data)),
+      data => this.stocks = data,
       error => console.log('server error')
       );
   }

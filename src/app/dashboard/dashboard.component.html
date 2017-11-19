@@ -1,5 +1,16 @@
-<p>
-  dashboard works!
+<div class="jumbotron">
+  <h1 class="display-3">Angular 4</h1>
+  <p class="lead">Stocks, Bonds, Mutual Funds</p>
+  <hr class="m-y-2">
+  <p>A simple Angular 4 Application</p>
 
-  Test
-</p>
+<ul>
+  <li *ngFor="let stock of stocks">
+    {{stock.id}} | {{stock.name}} | {{stock.stockCode}}
+  </li>
+</ul>
+
+  <p class="lead">
+    <!-- <a class="btn btn-primary btn-lg" href="#" role="button">START</a> -->
+  </p>
+</div>
