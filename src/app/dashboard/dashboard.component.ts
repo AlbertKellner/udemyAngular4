@@ -10,6 +10,8 @@ import { StockService } from './../stock.service';
 export class DashboardComponent implements OnInit {
 
   stocks: string[];
+  selectedStock: any;
+  updateEnable = false;
 
   ngOnInit() {
     this.getAllStocks();
@@ -19,17 +21,27 @@ export class DashboardComponent implements OnInit {
 
   }
 
-  createStock(newStockCode: string, newName: string) {
-    this.StockService.createStock(newStockCode, newName).subscribe();
-    // location.reload();
-  }
-
   getAllStocks() {
     this.StockService.getStocksApi()
       .subscribe(
       data => this.stocks = data,
       error => console.log('server error')
       );
+  }
+
+  createStock(newStockCode: string, newName: string) {
+    this.StockService.createStock(newStockCode, newName).subscribe();
+    // location.reload();
+  }
+
+  updateStock(newStockCode: string, newName: string) {
+    this.StockService.updateStock(this.selectedStock.id, newStockCode, newName).subscribe();
+    // location.reload();
+  }
+
+  loadDetails(stock: any) {
+    this.updateEnable = true;
+    this.selectedStock = stock;
   }
 
 }
