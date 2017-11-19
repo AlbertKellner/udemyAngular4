@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid"> -->
 
-  <nav class="navbar navbar-dark bg-primary">
+<!-- <nav class="navbar navbar-dark bg-primary">
     <a class="navbar-brand" routerLink="/">Angular Finance</a>
       <ul class="nav navbar-nav">
         <li class="nav-item active">
@@ -17,16 +17,37 @@
         <input class="form-control" type="text" placeholder="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-  </nav>
+  </nav> -->
 
-  <router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
 
-  <label> First Name Captalized
+<!-- <label> First Name Captalized
     <input [(ngModel)]="firstName" type='text'>
   </label>
   <br />
   <label name='fNameCapitalized'>
     {{firstName | capitalize}}
-  </label>
-  
+  </label> -->
+
+<!-- </div> -->
+
+<div *ngIf="!submitted" class="container">
+  <h2 class="mt-2">Add New Stock</h2>
+  <div class="row">
+    <form #stockForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="stockName">Stock Name:</label>
+        <input type="text" id="stockName" name="stockName" [(ngModel)]="newStock.stockName" class="form-control" required />
+      </div>
+      <div class="form-group">
+        <label for="stockCode">Stock Code:</label>
+        <input type="text" id="stockCode" name="stockCode" [(ngModel)]="newStock.stockCode" class="form-control" required />
+      </div>
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="submitted">
+  Submited!
 </div>
